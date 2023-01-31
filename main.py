@@ -1,9 +1,9 @@
-answer = input("Would you like to play? (yes/no)").lower().strip()
+answer = input("Would you like to play? (yes/no) > ").lower().strip()
 
 if answer == 'yes':
-    answer = input('You reach a crossroads, would you like to go left or right? (left/right)').lower().strip()
+    answer = input('You reach a crossroads, would you like to go left or right? (left/right) > ').lower().strip()
     if answer == 'left':
-        answer = input('You encounter a monster, would you like to run or attack? (run/attack)').lower().strip()
+        answer = input('You encounter a monster, would you like to run or attack? (run/attack) > ').lower().strip()
         if answer == 'attack':
             print('You were fighting bare-handed. You were dead.')
         else:
