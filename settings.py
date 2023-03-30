@@ -1,7 +1,5 @@
 class Settings:
     """A class to store all settings for Alien Invasion."""
-    GREY_COLOR = (230, 230, 230)
-    BLUE_COLOR = (0, 100, 255)
 
     def __init__(self):
         """Initialize the game's settings."""
