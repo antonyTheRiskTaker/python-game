@@ -15,6 +15,8 @@ class RocketGame:
     3. The rocket never moves beyond any edge of the screen.
     """
 
+    # TODO: Create rocket class.
+
     def __init__(self):
         """Initialise the game, and create game resources."""
         pygame.init()
