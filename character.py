@@ -9,7 +9,7 @@ class Character:
         self.screen = ai_game.screen
         self.screen_rect = ai_game.screen.get_rect()
 
-        # Load the character image, get its rect, and resize it.
+        # Load the rocket image, resize it, and get its rect.
         self.image = pygame.image.load('images/random-character.bmp')
         self.width = self.image.get_rect().width
         self.height = self.image.get_rect().height
