@@ -17,8 +17,6 @@ class Character:
             self.image, (self.width*0.2, self.height*0.2))
         self.rect = self.image.get_rect()
 
-        # TODO: figure out how to set image background colour
-
         # Start each new character at the centre of the screen.
         self.rect.center = self.screen_rect.center
 
