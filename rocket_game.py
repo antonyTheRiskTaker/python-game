@@ -2,6 +2,7 @@ import sys
 import pygame
 
 from rocket_game_settings import RocketGameSettings
+from rocket import Rocket
 
 
 class RocketGame:
@@ -28,11 +29,14 @@ class RocketGame:
         )
 
         pygame.display.set_caption("Rocket Game")
+        
+        self.rocket = Rocket(self)
     
     def run_game(self):
         """Start the main loop for the game."""
         while True:
             self._check_events()
+            # self.rocket.update() #! Does not work
             self._update_screen()
             self.clock.tick(60)
     
@@ -45,6 +49,7 @@ class RocketGame:
     def _update_screen(self):
         """Update images on the screen, and flip to the new screen."""
         self.screen.fill(self.settings.bg_colour)
+        self.rocket.blitme()
         
         # Uncomment it if pygame.display.update() doesn't work
         # pygame.display.flip()
