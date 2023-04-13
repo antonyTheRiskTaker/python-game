@@ -28,6 +28,7 @@ class Rocket:
         # Movement flag; start with a rocket that's not moving.
         self.moving_right = False
         self.moving_left = False
+        self.moving_down = False
         self.moving_up = False
 
     def update(self):
@@ -37,6 +38,8 @@ class Rocket:
             self.x += self.settings.rocket_speed
         if self.moving_left and self.rect.left > 0:
             self.x -= self.settings.rocket_speed
+        if self.moving_down and self.rect.bottom < self.screen_rect.bottom:
+            self.y += self.settings.rocket_speed
         if self.moving_up and self.rect.top > 0:
             self.y -= self.settings.rocket_speed
 
