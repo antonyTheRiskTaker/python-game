@@ -29,9 +29,9 @@ class RocketGame:
         )
 
         pygame.display.set_caption("Rocket Game")
-        
+
         self.rocket = Rocket(self)
-    
+
     def run_game(self):
         """Start the main loop for the game."""
         while True:
@@ -39,7 +39,7 @@ class RocketGame:
             # self.rocket.update() #! Does not work
             self._update_screen()
             self.clock.tick(60)
-    
+
     def _check_events(self):
         """Respond to keypresses and mouse events."""
         for event in pygame.event.get():
@@ -50,7 +50,7 @@ class RocketGame:
         """Update images on the screen, and flip to the new screen."""
         self.screen.fill(self.settings.bg_colour)
         self.rocket.blitme()
-        
+
         # Uncomment it if pygame.display.update() doesn't work
         # pygame.display.flip()
         pygame.display.update()
