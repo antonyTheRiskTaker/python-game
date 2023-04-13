@@ -21,6 +21,24 @@ class Rocket:
         # Start the rocket at the centre of the screen.
         self.rect.center = self.screen_rect.center
 
+        # Store a float for the rocket's exact horizontal location.
+        self.x = float(self.rect.x)
+
+        # Movement flag; start with a rocket that's not moving.
+        self.moving_right = False
+        self.moving_left = False
+
+    def update(self):
+        "Update the rocket's location based on the movement flag."
+        # Update the rocket's x value, not the rect.
+        if self.moving_right and self.rect.right < self.screen_rect.right:
+            self.x += self.settings.rocket_speed
+        if self.moving_left and self.rect.left > 0:
+            self.x -= self.settings.rocket_speed
+
+        # Update rect object from self.x.
+        self.rect.x = self.x
+
     def blitme(self):
         """Draw the rocket at its current location."""
         self.screen.blit(self.image, self.rect)
