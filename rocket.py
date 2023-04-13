@@ -19,7 +19,7 @@ class Rocket:
 
         # Start the rocket at the centre of the screen.
         self.rect.center = self.screen_rect.center
-    
+
     def blitme(self):
         """Draw the rocket at its current location."""
         self.screen.blit(self.image, self.rect)
