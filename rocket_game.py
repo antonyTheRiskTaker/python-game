@@ -45,6 +45,10 @@ class RocketGame:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
+            elif event.type == pygame.KEYDOWN:
+                pass
+            elif event.type == pygame.KEYUP:
+                pass
 
     def _update_screen(self):
         """Update images on the screen, and flip to the new screen."""
