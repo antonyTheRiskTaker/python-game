@@ -7,6 +7,7 @@ class Rocket:
     def __init__(self, rg_game):
         """Initialise the rocket and set its initial position."""
         self.screen = rg_game.screen
+        self.settings = rg_game.settings
         self.screen_rect = rg_game.screen.get_rect()
 
         # Load the rocket image, resize it, and get its rect.
